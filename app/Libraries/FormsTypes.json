@@ -1,0 +1,78 @@
+{
+  "headers": [
+    "simple",
+    "full"
+  ],
+  "content": [
+    "section",
+    "table"
+  ],
+  "options": {
+    "images": {
+      "multiple": false,
+      "type": "file",
+      "name": "files[]",
+      "label": ""
+    },
+    "multi-choices": {
+      "multiple": true,
+      "type": "checkbox",
+      "name": "checkbox[]",
+      "options": [],
+      "label": ""
+    },
+    "single-choice": {
+      "multiple": true,
+      "type": "radio",
+      "name": "radio",
+      "options": [],
+      "label": ""
+    },
+    "list": {
+      "multiple": true,
+      "type": "select",
+      "name": "select",
+      "options": [],
+      "label": ""
+    },
+    "one-line": {
+      "multiple": false,
+      "type": "text",
+      "name": "text",
+      "editable": true,
+      "label": ""
+    },
+    "number": {
+      "multiple": false,
+      "type": "number",
+      "name": "number",
+      "unit": "",
+      "label": ""
+    },
+    "text": {
+      "multiple": false,
+      "type": "textarea",
+      "name": "textarea",
+      "editable": true,
+      "label": ""
+    },
+    "comments": {
+      "multiple": false,
+      "type": "textarea",
+      "name": "comment",
+      "editable": true,
+      "label": ""
+    },
+    "options": {
+      "multiple": false,
+      "type": "textarea",
+      "name": "options",
+      "editable": false,
+      "content": ""
+    }
+  },
+  "footers": [
+    "simple",
+    "full"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "dates": [
+    "date",
+    "datetime",
+    "time",
+    "timestamp"
+  ],
+  "string": [
+    "char",
+    "varchar",
+    "enum",
+    "longtext",
+    "mediumtext",
+    "string",
+    "text"
+  ],
+  "numeric": [
+    "bigint",
+    "double",
+    "float",
+    "int",
+    "mediumint",
+    "smallint"
+  ],
+  "bool": [
+    "boolean",
+    "tinyint"
+  ]
+}

@@ -1,0 +1,210 @@
+#full-main {
+    width: 100%;
+    min-height: calc(100vh - 30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--yellow);
+}
+
+#guest-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 0;
+}
+
+#guest-container > svg {
+    position: absolute;
+    width: 110px;
+    top: -40px;
+    left: calc(50% - 55px);
+    z-index: 2;
+}
+
+#guest-container > form:not(.logout), #guest-container > div {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 6px;
+    max-width: calc(90% - 40px);
+    width: 400px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.guest-title {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    text-transform: capitalize;
+    color: inherit;
+    line-height: 1em;
+}
+
+#full-small {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+#full-small > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#full-small > a > svg {
+    height: 20px;
+}
+
+label[for="guest-remember"] {
+    font-size: 0.8em;
+    justify-content: center!important;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+label[for="guest-remember"] > span {
+    width: max-content!important;
+}
+
+#guest-remember {
+    position: relative;
+    top: -2px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.partials {
+    width: 100%;
+    margin: 10px 0;
+}
+
+p.partials {
+    text-align: center;
+    font-size: 0.8em;
+    line-height: 1.4em;
+}
+
+.errors-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.error {
+    color: red;
+    font-size: 0.8em;
+    line-height: 1.4em;
+    margin: 5px 0;
+}
+
+.profile-container {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-shadow: 6px 6px 12px rgb(0 0 0 / 10%);
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+
+.hidden {
+    display: none;
+}
+
+#profile-avatar-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 1000px;
+}
+
+#distribution-plan-preview,
+#clamping-plan-preview,
+#electrical-diagram-preview,
+#workshops-help-preview {
+    max-width: 100%;
+    width: 250px;
+    height: 160px;
+    border-radius: 3px;
+}
+
+#profile-avatar-preview,
+#distribution-plan-preview,
+#clamping-plan-preview,
+#electrical-diagram-preview,
+#workshops-help-preview {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid var(--light-grey);
+    background-color: var(--dark-grey);
+}
+
+#pic-trigger, .pic-trigger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--light-grey);
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+}
+
+#pic-trigger i, .pic-trigger i {
+    color: var(--white);
+    margin: 5px;
+}
+
+.center {
+    justify-content: center!important;
+    align-items: center!important;
+}
+
+.center > span {
+    width: max-content!important;
+}
+
+#delete-avatar {
+    cursor: pointer;
+}
+
+.errors-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.errors-container .errors-list {
+    align-items: flex-start;
+}
+
+.error {
+    text-transform: capitalize;
+}
+
+.errors-container .partials.error {
+    width: max-content;
+}
+
+.error ul {
+    padding-left: 20px;
+}

@@ -1,0 +1,79 @@
+aside {
+    position: fixed;
+    top: 70px;
+    height: calc(100% - 110px);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1em;
+    color: var(--white);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition: all ease-in-out 0.3s;
+}
+
+i.selected {
+    color: var(--yellow);
+}
+
+#aside-list-container .dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#aside-list-container li {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    min-width: max-content;
+    word-break: keep-all;
+    overflow: hidden;
+}
+
+#aside-list-container i {
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+#aside-list-container li > a, #aside-list-container li > span {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    min-width: max-content;
+    word-break: keep-all;
+    font-size: 0.8em;
+    cursor: pointer;
+    min-height: 33px;
+    max-height: 33px;
+}
+
+#aside-list-container {
+    padding-left: 4px;
+    width: 100%;
+    min-width: max-content;
+}
+
+.aside-links-labels {
+    font-weight: inherit;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.aside-list .fa-angle-down {
+    margin-left: 10px;
+    position: relative;
+    top: -1px;
+}
+
+.aside-links-labels > small {
+    opacity: 0.5;
+}

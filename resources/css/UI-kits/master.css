@@ -1,0 +1,389 @@
+.nude {
+    border: unset;
+    background-color: unset;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.form-control {
+    display: flex;
+    justify-content: flex-start;
+    color: inherit;
+    font-size: inherit;
+}
+
+.form-control:not(.file-form) {
+    width: 100%;
+}
+
+.form-control:not(.inline) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.form-control.inline {
+    align-items: center;
+}
+
+.form-control > span {
+    color: var(--light-grey);
+    width: 100%;
+}
+
+.form-control:not(.inline) > span {
+    font-size: 0.8em;
+}
+
+.options {
+    text-decoration: underline;
+    font-size: 0.8em;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    color: var(--yellow);
+    margin-top: 10px;
+}
+
+.options-inline {
+    text-decoration: underline;
+    color: var(--yellow);
+}
+
+.form-control input:not([type="radio"], [type="checkbox"]),
+.form-control select,
+.form-control textarea,
+.form-control datalist {
+    resize: none;
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    padding: 5px 0;
+    width: 100%;
+    background-color: transparent!important;
+    border-bottom: 2px solid var(--light-grey);
+    transition: all ease-in-out 0.2s;
+    font-family: inherit;
+}
+
+.form-control input:not([type="radio"], [type="checkbox"]):focus,
+.form-control select:focus,
+.form-control textarea:focus,
+.form-control datalist:focus {
+    border-bottom: 2px solid var(--dark-grey);
+}
+
+.form-control textarea {
+    height: 100px;
+}
+
+button, .btn {
+    border: unset;
+    outline: none;
+    padding: 5px 20px;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    border-radius: 4px;
+    transition: all ease-in-out 0.15s;
+}
+
+button.inactive, .btn.inactive, .btn:disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+
+button.yellow, .btn.yellow {
+    border: 1px solid var(--yellow);
+    background-color: var(--yellow);
+    color: var(--dark-grey);
+}
+
+button:not(.inactive):not(:disabled).yellow:hover, .btn.yellow:not(.inactive):not(:disabled):hover {
+    border: 1px solid var(--dark-grey);
+    background-color: var(--dark-grey);
+    color: var(--yellow);
+}
+
+button.white, .btn.white {
+    border: 1px solid var(--dark-grey);
+    background-color: var(--white);
+    color: var(--dark-grey);
+}
+
+button.white:not(.inactive):not(:disabled):hover, .btn.white:not(.inactive):not(:disabled):hover {
+    border: 1px solid var(--dark-grey);
+    background-color: var(--dark-grey);
+    color: var(--white);
+}
+
+::placeholder {
+    color: var(--light-grey);
+    opacity: 0.5;
+    font-style: italic;
+}
+
+input[type=radio].with-font {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+input[type=radio].with-font + span:before {
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f1db";
+    font-size: 1em;
+    color: var(--yellow);
+    width: 16px;
+    height: 16px;
+}
+
+input[type=radio].with-font:checked + span:before {
+    content: "\f192";
+}
+
+input[type=checkbox].with-font {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+input[type=checkbox].with-font + span:before {
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f096";
+    font-size: 1.25em;
+    color: var(--yellow);
+    margin-right: 5px;
+}
+
+input[type=checkbox].with-font:checked + span:before {
+    content: "\f046";
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.8));
+    opacity: 0;
+    visibility: hidden;
+    transition: all linear 0.2s;
+}
+
+#loader > span {
+    width: 60px;
+    height: 60px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid var(--yellow);
+    border-left: 5px solid var(--yellow);
+    border-right: 5px solid var(--yellow);
+    border-radius: 1000px;
+    animation: rotate linear 1s infinite;
+}
+
+.loaderDisplay,
+.modal-container.show {
+    visibility: visible!important;
+    opacity: 1!important;
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(transparent, rgba(0, 0, 0, 0.8))!important;
+    opacity: 0;
+    visibility: hidden;
+    transition: all linear 0.2s;
+}
+
+.modal {
+    width: 500px;
+    background-color: var(--white);
+    max-width: 90%;
+    border-radius: 3px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.modal-title {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    border-bottom: 1px solid var(--yellow);
+}
+
+.modal-title h4 {
+    width: 90%;
+    text-transform: capitalize;
+}
+
+.modal-title > i {
+    cursor: pointer;
+}
+
+.modal-content {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+.two-sides-modal {
+    display: flex;
+    align-items: flex-start;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 3px solid var(--yellow);
+}
+
+.modal-sides {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.modal-right > p {
+    width: 100%;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.modal-right > p:not(:last-of-type) {
+    padding-bottom: 5px;
+}
+
+.modal-right > p span {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    font-weight: normal;
+    font-size: inherit;
+    line-height: 1em;
+}
+
+.modal-right > p span img {
+    display: flex;
+    height: 16px;
+    margin: 0 5px;
+}
+
+.modal-right > p span i {
+    margin-left: 5px;
+}
+
+.modal-left {
+    height: 200px;
+}
+
+.leaflet-control-attribution.leaflet-control {
+    display: none;
+}
+
+.modal-full {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.modal-full > p {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#progress-bar {
+    margin-bottom: 10px;
+    border-radius: 100px;
+    border: 1px solid var(--light-grey);
+    width: 100%;
+    height: 10px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#progress-bar > span {
+    background-color: var(--yellow);
+    height: 100%;
+    display: flex;
+    transition: width linear 1s;
+}
+
+.modal-btns-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.modal-btns-container > button {
+    margin: 5px 0;
+}
+
+.lifetime-modal .modal-title > i {
+    display: none!important;
+}
+
+.step-title {
+    background-color: var(--yellow);
+    width: 100%;
+    padding: 5px 10px;
+    color: var(--dark-grey);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    margin-bottom: 10px;
+}

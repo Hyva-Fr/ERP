@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+}
+
+html {
+    background-color: #f1f1f1;
+}
+
+body {
+    background-color: #fff;
+    color: #000;
+    width: 21cm;
+    padding: 1cm;
+    margin: 40px auto;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#hider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 20;
+}
+
+#main-content, .form-constructor {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+h1, #sub-title {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#sub-title {
+    margin: 0;
+}
+
+.infos {
+    padding: 10px;
+    background-color: #9f9f9f;
+    border-radius: 6px;
+    margin: 20px auto;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.form-constructor > div:not(.infos), .form-control, .multiple-inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+fieldset {
+    border-radius: 6px;
+    border-color: #f9f9f9;
+    border-width: 2px;
+    width: 100%;
+    padding: 10px;
+}
+
+.fieldset {
+    width: 100%;
+    padding: 10px;
+}
+
+fieldset:not(:last-child), .fieldset:not(:last-child) {
+    margin-bottom: 1cm;
+}
+
+legend {
+    color: #a1a1a1;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.form-control:not(:first-of-type) {
+    margin-top: 20px;
+}
+
+.form-control > span:first-of-type {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #e1e1e1;
+    color: #191919;
+    padding: 5px 10px;
+}
+
+.multi-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    height: 3cm;
+    background-color: #f9f9f9;
+}
+
+input[type="text"], input[type="number"], select {
+    width: 100%;
+}
+
+input[type="text"], input[type="number"], select, textarea {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #3c3c3c;
+    padding: 5px;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus, textarea:focus {
+    outline: none;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin: 0 5px 2px 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+.multi-container {
+    margin-bottom: 3px;
+}
+
+.other-text {
+    margin-top: 5px;
+}
+
+.option-area {
+    font-size: 0.8em;
+    text-align: center;
+    width: 100%;
+}

@@ -1,0 +1,101 @@
+@import "./responsive.css";
+
+#dimmers-section {
+    display: flex;
+    justify-content: flex-start;
+    align-content: stretch;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.dimmers-containers {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.dimmers {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+#banner-dimmer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dimmers-title {
+    height: 30px;
+    text-align: center;
+    background-color: var(--yellow);
+    color: var(--dark-grey);
+    padding: 6px 10px;
+    width: 100%;
+    margin: auto;
+}
+
+.dimmers-title span {
+    font-size: 0.8em;
+    line-height: 1em;
+}
+
+.dimmer-cont {
+    width: 100%;
+}
+
+.scroll-dimmer {
+    overflow-y: auto;
+}
+
+.dimmer-cont table {
+    width: 100%;
+}
+
+.dimmer-cont table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.dimmer-cont table td, .dimmer-cont table th {
+    border: 1px solid #ddd;
+    padding: 4px 8px;
+    font-size: 0.8em;
+}
+
+.dimmer-cont table tr:nth-child(even){background-color: #f2f2f2;}
+
+.dimmer-cont table tr:hover {background-color: #ddd;}
+
+.dimmer-cont table tbody tr, .dimmer-cont table tbody tr * {
+    cursor: pointer;
+}
+
+.dimmer-cont table th {
+    text-align: left;
+    background-color: var(--dark-grey);
+    color: var(--white);
+}
+
+.dimmer-cont table img {
+    height: 14px;
+}
+
+.dimmer-table-img-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
